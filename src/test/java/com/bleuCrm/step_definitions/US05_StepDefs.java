@@ -20,8 +20,11 @@ public class US05_StepDefs {
     public void verify_the_user_can_see_following_mobile_app_options(List<String> expectedOptions) {
        String actualOptions = homePage.mobileApplicationOptions.getText();
 
-        Assert.assertTrue(actualOptions.contains(expectedOptions.get(0)));
-        Assert.assertTrue(actualOptions.contains(expectedOptions.get(1)));
+
+        for(int i = 0; i<expectedOptions.size();i++){
+            Assert.assertTrue(actualOptions.contains(expectedOptions.get(i)));
+        }
+
     }
 
 }

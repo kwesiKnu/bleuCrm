@@ -23,9 +23,9 @@ public class US04_StepDefs {
     public void verify_the_users_see_flowing_desktop_options(List<String> expectedOptions) {
         String actualOptions = homePage.desktopClientOptions.getText();
 
-        Assert.assertTrue(actualOptions.contains(expectedOptions.get(0)));
-        Assert.assertTrue(actualOptions.contains(expectedOptions.get(1)));
-        Assert.assertTrue(actualOptions.contains(expectedOptions.get(2)));
+        for(int i = 0; i<expectedOptions.size();i++){
+            Assert.assertTrue(actualOptions.contains(expectedOptions.get(i)));
+        }
 
     }
 
