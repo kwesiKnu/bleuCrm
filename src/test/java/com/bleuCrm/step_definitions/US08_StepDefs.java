@@ -29,7 +29,7 @@ List<String> actualOptions = new ArrayList<>();
        // System.out.println(expectedOptions);
 
 
-            Assert.assertEquals(actualOptions,expectedOptions);
+            Assert.assertEquals(expectedOptions,actualOptions);
         }
 
 }

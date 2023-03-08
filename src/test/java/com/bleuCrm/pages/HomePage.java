@@ -38,11 +38,17 @@ public class HomePage {
     @FindBy (xpath = "//a[@title='Chat and Calls']")
     public WebElement chatAndCalls;
 
-    @FindBy (xpath = "//div[@class='bx-desktop-appearance-tab']")
-    public WebElement chatAndCallsOptions;
+   // @FindBy (xpath = "//div[@class='bx-desktop-appearance-tab']")
+   // public WebElement chatAndCallsOptions;
 
     @FindBy (xpath = "(//div[@class='bx-desktop-appearance-tab']/div)")
     public List<WebElement> chatAndCallsOptions1;
+
+    @FindBy(xpath = "//span[.='My Profile']")
+    public WebElement myProfile;
+
+    @FindBy(xpath = "//a[@title='Drive']")
+    public WebElement driveModule;
 
     public void logOutMeth() {
         userProfile.click();
