@@ -15,7 +15,7 @@ public class US03_StepDefs {
 
     @Given("the user is on the homepage")
     public void the_users_are_on_the_homepage() {
-        login.loginMethod();
+        login.loginMethod("hr");
 
     }
 
