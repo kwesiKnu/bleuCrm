@@ -5,7 +5,9 @@ import com.bleuCrm.pages.LoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class US05_StepDefs {
@@ -18,12 +20,15 @@ public class US05_StepDefs {
     }
     @Then("verify the user can see following mobile app options:")
     public void verify_the_user_can_see_following_mobile_app_options(List<String> expectedOptions) {
-       String actualOptions = homePage.mobileApplicationOptions.getText();
+       List<WebElement> options = homePage.mobileApplicationOptions;
+       List<String> actualOptions = new ArrayList<>();
 
-
-        for(int i = 0; i<expectedOptions.size();i++){
-            Assert.assertTrue(actualOptions.contains(expectedOptions.get(i)));
+        for (WebElement each : options) {
+            actualOptions.add(each.getText());
         }
+
+            Assert.assertEquals(expectedOptions,actualOptions);
+
 
     }
 

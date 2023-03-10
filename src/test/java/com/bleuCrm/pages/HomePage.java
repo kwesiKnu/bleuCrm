@@ -22,8 +22,8 @@ public class HomePage {
     @FindBy(xpath = "(//div[@class='b24-app-block-content'])[1]")
     public WebElement desktopClientOptions;
 
-    @FindBy(xpath = "(//div[@class='b24-app-block-content'])[2]")
-    public WebElement mobileApplicationOptions;
+    @FindBy(xpath = "(//div[@class='b24-app-block-content'])[2]/a")
+    public List<WebElement> mobileApplicationOptions;
 
 
     @FindBy(xpath = "//div[@class='menu-popup-items']")
